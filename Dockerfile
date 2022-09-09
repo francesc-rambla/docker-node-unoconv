@@ -9,5 +9,8 @@ RUN apt-get update && apt-get -y install \
     fonts-arphic-uming \
     fonts-indic \
 && rm -rf /var/lib/apt/lists/*
+ENV LC_ALL es_ES.UTF-8
+ENV LANG es_ES.UTF-8
+ENV LANGUAGE es_ES.UTF-8
 
 ENTRYPOINT /usr/bin/unoconv --listener --server=0.0.0.0 --port=2002
